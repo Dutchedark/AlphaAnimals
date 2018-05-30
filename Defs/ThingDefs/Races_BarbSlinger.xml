@@ -11,8 +11,8 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>ToxicSting</damageDef>
-      <DamageAmountBase>5</DamageAmountBase>
-      <Speed>64</Speed>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>64</speed>
     </projectile>
   </ThingDef>
 
@@ -32,14 +32,14 @@
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>90</defaultCooldownTicks>
+       
         <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
         <meleeDamageDef>Scratch</meleeDamageDef>
         <linkedBodyPartsGroup>PincerAttackTool</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>120</defaultCooldownTicks>
+       
         <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
         <meleeDamageDef>ToxicSting</meleeDamageDef>
         <linkedBodyPartsGroup>Sting</linkedBodyPartsGroup>
@@ -47,8 +47,8 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Barb</projectileDef>
-        <warmupTicks>200</warmupTicks>
+        <defaultProjectile>Bullet_Barb</defaultProjectile>
+        <warmupTime>3.3</warmupTime>
         <range>24</range>
       </li>
     </verbs>

@@ -16,14 +16,14 @@
 		<verbs>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTicks>80</defaultCooldownTicks>
+
 				<meleeDamageBaseAmount>6</meleeDamageBaseAmount>
 				<meleeDamageDef>ToxicSting</meleeDamageDef>
 				<linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTicks>80</defaultCooldownTicks>
+
 				<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
 				<meleeDamageDef>Bite</meleeDamageDef>
 				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>

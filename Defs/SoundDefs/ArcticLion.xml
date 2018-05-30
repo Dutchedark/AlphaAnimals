@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DefPackage-SoundDef>
+<Defs>
 
 	<!-- ======================== ArcticLion ======================== -->
 
 	<SoundDef>
 		<defName>Pawn_ArcticLion_Call</defName>
 		<eventNames />
+    <context>MapOnly</context>
 		<subSounds>
 			<li>
 				<grains>
@@ -33,6 +34,7 @@
 	<SoundDef>
 		<defName>Pawn_ArcticLion_Angry</defName>
 		<eventNames />
+    <context>MapOnly</context>
 		<maxVoices>2</maxVoices>
 		<subSounds>
 			<li>
@@ -62,6 +64,7 @@
 	<SoundDef>
 		<defName>Pawn_ArcticLion_Wounded</defName>
 		<eventNames />
+    <context>MapOnly</context>
 		<subSounds>
 			<li>
 				<grains>
@@ -90,6 +93,7 @@
 	<SoundDef>
 		<defName>Pawn_ArcticLion_Death</defName>
 		<eventNames />
+    <context>MapOnly</context>
 		<subSounds>
 			<li>
 				<grains>
@@ -114,4 +118,4 @@
 		</subSounds>
 	</SoundDef>
 
-</DefPackage-SoundDef>
+</Defs>

@@ -9,7 +9,6 @@
 		<defName>ToxicSting</defName>
 		<label>toxic sting</label>
 		<externalViolence>true</externalViolence>
-		<battleWound>true</battleWound>
 		<deathMessage>{0} has been stung to death.</deathMessage>
 		<hediff>Stab</hediff>
 		<hediffSolid>Crack</hediffSolid>
@@ -28,7 +27,6 @@
 		<defName>Pierce</defName>
 		<label>pierce</label>
 		<externalViolence>true</externalViolence>
-		<battleWound>true</battleWound>
 		<deathMessage>{0} has been gored to death.</deathMessage>
 		<hediff>Stab</hediff>
 		<hediffSolid>Crack</hediffSolid>

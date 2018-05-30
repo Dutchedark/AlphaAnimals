@@ -19,14 +19,14 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
 		<verbs>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTicks>115</defaultCooldownTicks>
+
 				<meleeDamageBaseAmount>30</meleeDamageBaseAmount>
 				<meleeDamageDef>BodyCrush</meleeDamageDef>
 				<linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTicks>95</defaultCooldownTicks>
+
 				<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
 				<meleeDamageDef>Pierce</meleeDamageDef>
 				<linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>

@@ -18,7 +18,7 @@ The few that survived an encounter with these monsters report bullets being shru
 		<verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>95</defaultCooldownTicks>
+       
         <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
         <meleeDamageDef>Pierce</meleeDamageDef>
         <linkedBodyPartsGroup>BladeAttackTool</linkedBodyPartsGroup>
@@ -33,7 +33,7 @@ The few that survived an encounter with these monsters report bullets being shru
       </li>
 			<li>
 				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTicks>120</defaultCooldownTicks>
+
 				<meleeDamageBaseAmount>14</meleeDamageBaseAmount>
 				<meleeDamageDef>Bite</meleeDamageDef>
 				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>

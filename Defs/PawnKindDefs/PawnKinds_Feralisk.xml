@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<PawnKindDefs>
+<Defs>
 
   <PawnKindDef ParentName="AnimalBase">
     <defName>Feralisk</defName>
@@ -46,4 +46,4 @@
     </lifeStages>
   </PawnKindDef>
 
-</PawnKindDefs>
+</Defs>

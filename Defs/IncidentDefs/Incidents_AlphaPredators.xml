@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+<!--
   <IncidentDef>
     <defName>ManhunterPack</defName>
     <workerClass>IncidentWorker_ManhunterPack</workerClass>
@@ -10,14 +10,14 @@
     <pointsScaleable>true</pointsScaleable>
     <pawnKinds>
       <li>ArcticLion</li>
-      <!--<li>Barbslinger</li>
+      <li>Barbslinger</li>
       <li>Feralisk</li>
       <li>Frostmite</li>
       <li>Groundrunner</li>
       <li>Needlepost</li>
       <li>RaptorShrimp</li>
-      <li>TerramorphWorm</li>-->
+      <li>TerramorphWorm</li>
     </pawnKinds>
   </IncidentDef>
-
+-->
 </Defs>

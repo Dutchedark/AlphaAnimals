@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<BodyPartDefs>
+<Defs>
 
 	<BodyPartDef>
 		<defName>Thorax</defName>
@@ -26,9 +26,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
-		<activities>
-			<li>Eating_source</li>
-		</activities>
+    <tags>
+      <li>EatingSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -66,9 +66,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Moving_body</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -79,9 +79,9 @@
 		<oldInjuryBaseChance>0.3</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Hearing_head</li>
-		</activities>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -92,10 +92,10 @@
 		<oldInjuryBaseChance>0</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Eating_source</li>
-			<li>Talking_source</li>
-		</activities>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -106,9 +106,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -119,9 +119,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -132,9 +132,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -145,9 +145,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -158,9 +158,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -171,9 +171,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -184,9 +184,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -197,9 +197,9 @@
 		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
 		<skinCovered>false</skinCovered>
 		<useDestroyedOutLabel>true</useDestroyedOutLabel>
-		<activities>
-			<li>Sight_source</li>
-		</activities>
+    <tags>
+      <li>SightSource</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -209,9 +209,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_leftWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -221,9 +221,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_leftWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -233,9 +233,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_leftWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -245,9 +245,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_leftWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -257,9 +257,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_rightWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -269,9 +269,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_rightWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -281,9 +281,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_rightWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -293,9 +293,9 @@
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
 		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
 		<skinCovered>true</skinCovered>
-		<activities>
-			<li>Moving_rightWay</li>
-		</activities>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -366,4 +366,4 @@
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
-</BodyPartDefs>
+</Defs>
