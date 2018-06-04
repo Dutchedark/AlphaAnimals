@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>ToxicSting</defName>
+    <label>Toxic sting</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Pierce</defName>
+    <label>Pierce</label>
+  </ToolCapacityDef>
+
+    <ToolCapacityDef>
+    <defName>BodyCrush</defName>
+    <label>Crush</label>
+  </ToolCapacityDef>
+
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ManeuverDef>
+    <defName>ToxicSting</defName>
+    <requiredCapacity>ToxicSting</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttack</verbClass>
+      <meleeDamageDef>ToxicSting</meleeDamageDef>
+    </verb>
+    <combatLogRules>Maneuver_Stab</combatLogRules>
+  </ManeuverDef>
+
+    <ManeuverDef>
+    <defName>Pierce</defName>
+    <requiredCapacity>Pierce</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttack</verbClass>
+      <meleeDamageDef>Pierce</meleeDamageDef>
+    </verb>
+    <combatLogRules>Maneuver_Stab</combatLogRules>
+  </ManeuverDef>
+
+    <ManeuverDef>
+    <defName>BodyCrush</defName>
+    <requiredCapacity>BodyCrush</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttack</verbClass>
+      <meleeDamageDef>BodyCrush</meleeDamageDef>
+    </verb>
+    <combatLogRules>Maneuver_Smash</combatLogRules>
+  </ManeuverDef>
+
+</Defs>

@@ -116,9 +116,10 @@
       <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
     </ThingDef>
 
-    <PawnKindDef ParentName="AnimalThingBase">
+    <PawnKindDef ParentName="AnimalKindBase">
         <defName>ArcticLion</defName>
         <label>arctic lion</label>
         <race>ArcticLion</race>
@@ -178,7 +179,7 @@
      <!-- =========================Barb Slinger=================================== -->
 
     
-<ThingDef ParentName="BaseAnimal">
+<ThingDef ParentName="AnimalThingBase">
     <defName>Barbslinger</defName>
     <label>barbslinger</label>
     <description>A large genetically-modified scorpion. No one really knows where they came from. But judging by its ability to rip apart living things within reach and shish kebab those outside of it; it’s a monster made for war.</description>
@@ -373,7 +374,7 @@
         </wildBiomes>
         <body>QuadrupedAnimalWithPawsAndTail</body>
         <herdAnimal>false</herdAnimal>
-        <packAnimal>true</packAnimal>
+        <packAnimal>false</packAnimal>
         <predator>false</predator>
         <baseBodySize>4.00</baseBodySize>
         <baseHungerRate>2.0</baseHungerRate>
@@ -416,7 +417,7 @@
                 <minAge>1.5</minAge>
                 <soundCall>Pawn_Tortoise_Call</soundCall>
                 <soundAngry>Pawn_Tortoise_Angry</soundAngry>
-                <soundWounded>Pawn_Tortoise_Pain</soundWounded>
+                <soundWounded>Pawn_Tortoise_Wounded</soundWounded>
                 <soundDeath>Pawn_Tortoise_Death</soundDeath>
             </li>
         </lifeStageAges>
@@ -431,7 +432,7 @@
     <label>bouldermit</label>
     <race>Bouldermit</race>
     <combatPower>350</combatPower>
-    <canArriveManhunter>false<canArriveManhunter>
+    <canArriveManhunter>false</canArriveManhunter>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <lifeStages>
@@ -580,7 +581,7 @@
     <label>cactipine</label>
     <race>Cactipine</race>
     <combatPower>70</combatPower>
-    <canArriveManhunter>true<canArriveManhunter>
+    <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <wildSpawn_GroupSizeRange>
@@ -809,7 +810,7 @@
 
     <!-- ==============================Feralisk============================== -->
 
-  <ThingDef ParentName="BaseAnimal">
+  <ThingDef ParentName="AnimalThingBase">
     <defName>Feralisk</defName>
     <label>Feralisk</label>
     <description>Someone once thought that creating supersized spiders for silk production was a good idea. Their home planet is now reduced to a Marble World; a world completely purged by atomic fire.</description>
@@ -820,6 +821,1237 @@
       <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
       <ArmorRating_Heat>0.2</ArmorRating_Heat>
     </statBases>
+    <tools>
+      <li>
+        <label>Paw</label>
+        <cooldownTime>2</cooldownTime>
+        <power>12</power>
+        <capacities><li>Scratch</li></capacities>
+        <linkedBodyPartsGroup>LegAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <cooldownTime>2.5</cooldownTime>
+        <power>15</power>
+        <capacities><li>ToxicBite</li></capacities>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.03</BorealForest>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>Arachnid</body>
+      <packAnimal>false</packAnimal>
+      <baseBodySize>1.00</baseBodySize>
+      <baseHungerRate>1.7</baseHungerRate>
+      <baseHealthScale>1.2</baseHealthScale>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <leatherColor>(93,74,68)</leatherColor>
+      <leatherLabel>feralisk skin</leatherLabel>
+      <leatherInsulation>1.2</leatherInsulation>
+      <wildness>0.985</wildness>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>30</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.24</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.20</minAge>
+          <soundWounded>Pawn_Feralisk_Wounded</soundWounded>
+          <soundDeath>Pawn_Feralisk_Death</soundDeath>
+          <soundCall>Pawn_Feralisk_Call</soundCall>
+          <soundAngry>Pawn_Feralisk_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+   <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Feralisk</defName>
+    <race>Feralisk</race>
+    <label>feralisk</label>
+    <combatPower>300</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>4</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Feralisk</texPath>
+          <drawSize>0.7</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Feralisk</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Feralisk</texPath>
+          <drawSize>1.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+   <!-- ===========================Frostmite================================= -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Frostmite</defName>
+    <label>frostmite</label>
+    <description>A large parasite usually found in cold places. They sweep the cold barren lands in search of corpses buried in the snow. Eating the preserved flesh and leaving a ravaged skeleton in its place; devoid of their former identity.</description>
+    <statBases>
+      <MoveSpeed>6.00</MoveSpeed>
+      <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <MarketValue>560</MarketValue>
+    </statBases>
+     <tools>    
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>2</cooldownTime>
+            <power>6</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>2</cooldownTime>
+            <power>6</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <cooldownTime>2.5</cooldownTime>
+            <power>5</power>
+            <capacities><li>Bite</li></capacities>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <IceSheet>0.05</IceSheet>
+        <Tundra>0.05</Tundra>      
+      </wildBiomes>
+      <herdAnimal>true</herdAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>0.50</baseBodySize>
+      <baseHungerRate>1.3</baseHungerRate>
+      <baseHealthScale>0.8</baseHealthScale>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <leatherColor>(207,209,234)</leatherColor>
+      <leatherLabel>frostmite skin</leatherLabel>
+      <leatherInsulation>2.2</leatherInsulation>
+      <wildness>0.9</wildness>
+      <trainableIntelligence>None</trainableIntelligence>
+      <gestationPeriodDays>30</gestationPeriodDays>
+      <litterSizeCurve>
+       <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>4</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.08</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.40</minAge>
+          <soundWounded>Pawn_Frostmite_Wounded</soundWounded>
+          <soundDeath>Pawn_Frostmite_Death</soundDeath>
+          <soundCall>Pawn_Frostmite_Call</soundCall>
+          <soundAngry>Pawn_Frostmite_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+   <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Frostmite</defName>
+    <race>Frostmite</race>
+    <label>frostmite</label>
+    <combatPower>80</combatPower>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>5</min>
+      <max>25</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FrostMite</texPath>
+          <drawSize>0.7</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FrostMite</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/FrostMite</texPath>
+          <drawSize>1.6</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- =======================Legendary Gallatross===================================== -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Gallatross</defName>
+    <label>gallatross</label>
+    <description>
+          Throughout every world,
+          Flow the tale of old,
+          A creature with untold might 
+          And an immeasurable height.
+          Strength that machines can’t copy
+          Power that so-called gods call heresy.
+          Beware, beware would-be foes
+          Beware, the wrath of the Gallatross.
+    </description>
+    <statBases>
+      <MoveSpeed>1.00</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <MarketValue>5000</MarketValue>
+    </statBases>
+    <tools>    
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>3</cooldownTime>
+            <power>40</power>
+            <capacities><li>Blunt</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>3</cooldownTime>
+            <power>40</power>
+            <capacities><li>Blunt</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.001</BorealForest>
+        <IceSheet>0.001</IceSheet>
+        <Tundra>0.001</Tundra>
+        <TemperateForest>0.001</TemperateForest>
+        <TropicalRainforest>0.001</TropicalRainforest>
+        <AridShrubland>0.001</AridShrubland>
+        <Desert>0.001</Desert>
+        <ExtremeDesert>0.001</ExtremeDesert>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <packAnimal>true</packAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>6.00</baseBodySize>
+      <baseHungerRate>5.0</baseHungerRate>
+      <baseHealthScale>6.0</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, DendrovoreAnimal</foodType>
+      <leatherColor>(233,233,233)</leatherColor>
+      <leatherLabel>galatross leather</leatherLabel>
+      <leatherInsulation>3.0</leatherInsulation>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>120</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.99, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>200</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <soundWounded>Pawn_Thrumbo_Pain</soundWounded>
+          <soundDeath>Pawn_Thrumbo_Death</soundDeath>
+          <soundCall>Pawn_Thrumbo_Call</soundCall>
+          <soundAngry>Pawn_Thrumbo_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+   <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Gallatross</defName>
+    <label>gallatross</label>
+    <race>Gallatross</race>
+    <combatPower>1000</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+    <lifeStages>
+      <li>
+        <label>gallatross</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gallatross</texPath>
+          <drawSize>2.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>gallatross</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gallatross</texPath>
+          <drawSize>2.7</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Gallatross</texPath>
+          <drawSize>4.5</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>4.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
 
 
+ <!-- ============================================================ -->
+
+ <ThingDef ParentName="AnimalThingBase">
+		<defName>Groundrunner</defName>
+		<label>groundrunner</label>
+		<description>A hybrid between a bear and mole, Groundrunners originally came from Cave Worlds. They were used as walking heavy tools by the locals when they hit parts that plasteel can’t break, and for hauling large boulders that their owners can’t lift.
+
+Due to their domesticated origins, they are surprisingly docile and easy to tame. Their incredible strength and sharp claws allows them to break rocks with relative ease. But out here in the Rim, those claws are usually reserved for ripping power armors apart along with their wearers.</description>
+		<statBases>
+			<MoveSpeed>3.00</MoveSpeed>
+			<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+			<MarketValue>2450</MarketValue>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		</statBases>
+		<tools>    
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>1.5</cooldownTime>
+            <power>13</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>1.5</cooldownTime>
+            <power>13</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <cooldownTime>2</cooldownTime>
+            <power>17</power>
+            <capacities><li>Bite</li></capacities>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+		<race>
+      <wildBiomes>
+        <TemperateForest>0.07</TemperateForest>     
+      </wildBiomes>
+       <herdAnimal>true</herdAnimal>
+       <packAnimal>false</packAnimal>
+      <predator>false</predator>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<baseBodySize>2.50</baseBodySize>
+			<baseHungerRate>1</baseHungerRate>
+			<baseHealthScale>3</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+			<leatherColor>(156,102,31)</leatherColor>
+			<leatherLabel>groundrunner skin</leatherLabel>
+			<leatherInsulation>1.2</leatherInsulation>
+			<wildness>0.6</wildness>
+			<trainableIntelligence>Advanced</trainableIntelligence> <!-- *** Consider a new type of intelligence... -->
+			<gestationPeriodDays>90</gestationPeriodDays>
+			<litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+			</litterSizeCurve>
+			<lifeExpectancy>25</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.50</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>2.50</minAge>
+					<soundWounded>Pawn_Alphabeaver_Wounded</soundWounded>
+					<soundDeath>Pawn_Alphabeaver_Death</soundDeath>
+					<soundCall>Pawn_Alphabeaver_Call</soundCall>
+					<soundAngry>Pawn_Alphabeaver_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+   <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Groundrunner</defName>
+    <race>Groundrunner</race>
+    <label>groundrunner</label>
+    <combatPower>350</combatPower>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>3</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GroundRunner</texPath>
+          <drawSize>1.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GroundRunner</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/GroundRunner</texPath>
+          <drawSize>2.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+ <!-- ===========================MegaLouse================================= -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>MegaLouse</defName>
+    <label>megalouse</label>
+    <description>
+      A large genetically engineered pillbug. These creatures once served as the frontline skirmishers of an insectoid hive; A collection of genetically modified insects made as a weapon against Mechanoid invasions. Their job consisted of reducing lone Mechanoid infantry to swiss cheese; And they were good at it. Even the mighty Centipede was no match against the swarm of spikes. 
+Nowadays, they can be found roaming in packs that’s a joke compared to their former numbers and with killer instincts that waits to be reawakened once more.
+    </description>
+    <statBases>
+      <MoveSpeed>3.00</MoveSpeed>
+      <ComfyTemperatureMin>-70</ComfyTemperatureMin>
+      <MarketValue>2200</MarketValue>
+    </statBases>
+   	<tools>    
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>1.5</cooldownTime>
+            <power>28</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>1.5</cooldownTime>
+            <power>28</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <cooldownTime>3</cooldownTime>
+            <power>32</power>
+            <capacities><li>Bite</li></capacities>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.03</BorealForest>
+        <IceSheet>0.03</IceSheet>
+        <Tundra>0.03</Tundra>
+        <TemperateForest>0.03</TemperateForest>
+        <AridShrubland>0.03</AridShrubland>
+        <Desert>0.03</Desert>
+        <ExtremeDesert>0.03</ExtremeDesert>      
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>3.00</baseBodySize>
+      <baseHungerRate>2.0</baseHungerRate>
+      <baseHealthScale>2.0</baseHealthScale>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <leatherColor>(210,210,210)</leatherColor>
+      <leatherLabel>megalouse carapace</leatherLabel>
+      <leatherInsulation>1.1</leatherInsulation>
+      <wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>30</gestationPeriodDays>
+      <litterSizeCurve>
+       <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>7</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <soundWounded>Pawn_BigInsect_Pain</soundWounded>
+          <soundDeath>Pawn_BigInsect_Death</soundDeath>
+          <soundCall>Pawn_BigInsect_Call</soundCall>
+          <soundAngry>Pawn_BigInsect_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MegaLouse</defName>
+    <label>megalouse</label>
+    <race>MegaLouse</race>
+    <combatPower>150</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_GroupSizeRange>
+      <min>1</min>
+      <max>2</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <label>megalouse</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MegaLouse</texPath>
+          <drawSize>1.2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>megalouse</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MegaLouse</texPath>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MegaLouse</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+<!-- ===========================Needlepost================================= -->
+  
+ <ThingDef ParentName="AnimalThingBase">
+		<defName>Needlepost</defName>
+		<label>Needlepost</label>
+		<description>A cactus genetically modified to give it sentience. The first iteration of this creature was supposed to be a stationary tactical deterrent (the Whip Cactus). But having no intelligence or mobility crippled its effectiveness. With a little genetic engineering, it was given a mobile body, an infantile intelligence, increased aggression, and toxic barbs for good measure. The result backfired as commands proved ineffective. The facility was promptly overrun by the experiments; releasing another abomination into the Rim to contend for the top of the food chain.</description>
+		<statBases>
+			<MoveSpeed>5.00</MoveSpeed>
+			<ComfyTemperatureMin>10</ComfyTemperatureMin>
+			<MarketValue>630</MarketValue>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		</statBases>
+		<tools>    
+        <li>
+            <label>Barb</label>
+            <cooldownTime>2</cooldownTime>
+            <power>6</power>
+            <capacities><li>ToxicSting</li></capacities>
+            <linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <cooldownTime>2.2</cooldownTime>
+            <power>8</power>
+            <capacities><li>Bite</li></capacities>
+            <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+		<race>
+      <wildBiomes>
+        <Desert>0.04</Desert>
+        <ExtremeDesert>0.04</ExtremeDesert>      
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>SentientPlant</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>1.80</baseBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<baseHealthScale>0.9</baseHealthScale>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+			<leatherColor>(183,216,128)</leatherColor>
+			<leatherLabel>cactus flesh</leatherLabel>
+			<leatherInsulation>0.9</leatherInsulation>
+			<wildness>0.8</wildness>
+			<trainableIntelligence>None</trainableIntelligence>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.99, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>6</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.12</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.60</minAge>
+					<soundWounded>Pawn_Needlepost_Wounded</soundWounded>
+					<soundDeath>Pawn_Needlepost_Death</soundDeath>
+					<soundCall>Pawn_Needlepost_Call</soundCall>
+					<soundAngry>Pawn_Needlepost_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+<PawnKindDef ParentName="AnimalKindBase">
+    <defName>Needlepost</defName>
+    <race>Needlepost</race>
+    <label>needlepost</label>
+    <combatPower>90</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>6</min>
+      <max>10</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/NeedlePost</texPath>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/NeedlePost</texPath>
+          <drawSize>1.4</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/NeedlePost</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+   <!-- ============================================================ -->
+
+ <ThingDef ParentName="AnimalThingBase">
+		<defName>RaptorShrimp</defName>
+		<label>RaptorShrimp</label>
+		<description>A large genetically modified creature, its origins unknown. They are known to make homes in tropical regions. Instilling fear among the local inhabitants as those who pass through its territory are often reported to go missing; their bodies never found.
+
+The few that survived an encounter with these monsters report bullets being shrugged off, limbs of their companions being torn apart, and the statement “The grass has eyes.”</description>
+		<statBases>
+			<MoveSpeed>4.70</MoveSpeed>
+			<ComfyTemperatureMin>10</ComfyTemperatureMin>
+			<MarketValue>2100</MarketValue>
+			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+        <li>
+            <label>Blade-like Arm</label>
+            <cooldownTime>2</cooldownTime>
+            <power>10</power>
+            <capacities><li>Pierce</li></capacities>
+            <linkedBodyPartsGroup>BladeAttackTool</linkedBodyPartsGroup>
+             <surpriseAttack>
+              <extraMeleeDamages>
+                <li>
+                  <def>Stun</def>
+                  <amount>20</amount>
+                </li>
+              </extraMeleeDamages>
+            </surpriseAttack>
+        </li>
+        <li>
+            <cooldownTime>2</cooldownTime>
+            <power>14</power>
+            <capacities><li>Bite</li></capacities>
+            <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+		<race>
+      <wildBiomes>
+        <TropicalRainforest>0.02</TropicalRainforest>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>SnakeWithTwoLimbs</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>1.40</baseBodySize>
+			<baseHungerRate>1.2</baseHungerRate>
+			<baseHealthScale>1.5</baseHealthScale>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+			<leatherColor>(96,115,96)</leatherColor>
+			<leatherLabel>raptor plate</leatherLabel>
+			<leatherInsulation>0.8</leatherInsulation>
+			<wildness>0.9</wildness>
+			<trainableIntelligence>None</trainableIntelligence>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<litterSizeCurve>
+			<points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+			</litterSizeCurve>
+			<lifeExpectancy>15</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.30</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1.50</minAge>
+					<soundWounded>Pawn_RaptorShrimp_Wounded</soundWounded>
+					<soundDeath>Pawn_RaptorShrimp_Death</soundDeath>
+					<soundCall>Pawn_RaptorShrimp_Call</soundCall>
+					<soundAngry>Pawn_RaptorShrimp_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>RaptorShrimp</defName>
+    <race>RaptorShrimp</race>
+    <label>raptor shrimp</label>
+    <combatPower>300</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>4</min>
+      <max>6</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RaptorShrimp</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RaptorShrimp</texPath>
+          <drawSize>2.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/RaptorShrimp</texPath>
+          <drawSize>3.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>3.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+   <!-- ============================================================ -->
+
+ <ThingDef ParentName="AnimalThingBase">
+		<defName>TerramorphWorm</defName>
+		<label>TerramorphWorm</label>
+		<description>An extremely large, genetically-engineered worm. Despite its incredibly intimidating size and arsenal, these huge creatures are rather quite peaceful. It was once part of the worker caste of an artificial ecosystem of insectoids designed to fight mechanoid invasions. It carried and moved things that its little cousins cannot.
+
+While generally peaceful, if provoked, it becomes a terrifying force that can rival those of mechanoid Centipedes.</description>
+		<statBases>
+			<MoveSpeed>2.0</MoveSpeed>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<MarketValue>1400</MarketValue>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+		</statBases>
+		<tools>
+        <li>
+            <label>Body</label>
+            <cooldownTime>2</cooldownTime>
+            <power>30</power>
+            <capacities><li>BodyCrush</li></capacities>
+            <linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Tusk</label>
+            <cooldownTime>2</cooldownTime>
+            <power>10</power>
+            <capacities><li>Pierce</li></capacities>
+            <linkedBodyPartsGroup>TuskAttackTool</linkedBodyPartsGroup>
+        </li>
+    </tools>
+		<race>
+      <wildBiomes>
+        <AridShrubland>0.03</AridShrubland>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>WormWithArmorAndTusks</body>
+			<herdAnimal>true</herdAnimal>
+      <packAnimal>true</packAnimal>
+			<baseBodySize>3.00</baseBodySize>
+			<baseHungerRate>1.2</baseHungerRate>
+			<baseHealthScale>3.0</baseHealthScale>
+       <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+			<leatherColor>(102,93,93)</leatherColor>
+			<leatherLabel>terramorph worm plate</leatherLabel> <!-- *** Convert to Plate later *** -->
+			<leatherInsulation>1.0</leatherInsulation>
+			<wildness>0.9</wildness>
+			<trainableIntelligence>Intermediate</trainableIntelligence>
+			<gestationPeriodDays>90</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.99, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>45</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.90</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>4.50</minAge>
+					<soundWounded>Pawn_Terramorph_Wounded</soundWounded>
+					<soundDeath>Pawn_Terramorph_Death</soundDeath>
+					<soundCall>Pawn_Terramorph_Call</soundCall>
+					<soundAngry>Pawn_Terramorph_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+   <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TerramorphWorm</defName>
+    <race>TerramorphWorm</race>
+    <label>terramorph worm</label>
+    <combatPower>200</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>3</min>
+      <max>5</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TerramorphWorm</texPath>
+          <drawSize>1.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TerramorphWorm</texPath>
+          <drawSize>3.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>3.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TerramorphWorm</texPath>
+          <drawSize>4.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>4.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+   <!-- =============================Tetra Slug=============================== -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TetraSlug</defName>
+    <label>tetra slug</label>
+    <description>
+      These massive slugs are a common sight among Glitterworld controlled territories; Lumbering about as glorified power plants. Outside of it, they are deployed as a mobile power source for Glitterworld research expeditions.
+      It is rare to see one without the iconic power cores that protrude from their backs. As their unique bodily chemical composition are capable of outputting power that far surpasses any known natural sources. Thus they are widely valued by every technologically developing civilization throughout the galaxy.
+      While a gentle giant that would prefer to run away instead of fight, modified slugs come armored with plasteel shells, quad cores that can act as Tesla cannons, and a Tactical AI inserted within the brain that takes over and makes no hesitation to use all of its armament to obliterate any perceived threat within vicinity.
+    </description>
+    <statBases>
+      <MoveSpeed>0.6</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>4000</MarketValue>
+    </statBases>
+    <tools>
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>2</cooldownTime>
+            <power>28</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>2</cooldownTime>
+            <power>28</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.001</BorealForest>
+        <IceSheet>0.001</IceSheet>
+        <Tundra>0.001</Tundra>
+        <TemperateForest>0.001</TemperateForest>
+        <AridShrubland>0.001</AridShrubland>
+        <Desert>0.001</Desert>
+        <ExtremeDesert>0.001</ExtremeDesert>        
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <packAnimal>false</packAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>5.00</baseBodySize>
+      <baseHungerRate>3.0</baseHungerRate>
+      <baseHealthScale>4.0</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <leatherColor>(127,129,154)</leatherColor>
+      <leatherLabel>tetra slug leather</leatherLabel>
+      <leatherInsulation>2.1</leatherInsulation>
+      <wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>150</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.99, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>30</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <soundWounded>Pawn_Rhinoceros_Wounded</soundWounded>
+          <soundDeath>Pawn_Rhinoceros_Death</soundDeath>
+          <soundCall>Pawn_Rhinoceros_Call</soundCall>
+          <soundAngry>Pawn_Rhinoceros_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TetraSlug</defName>
+    <label>tetra slug</label>
+    <race>TetraSlug</race>
+    <combatPower>650</combatPower>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+    <lifeStages>
+      <li>
+        <label>tetra slug</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TetraSlug</texPath>
+          <drawSize>2.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>tetra slug</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TetraSlug</texPath>
+          <drawSize>3.2</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>3.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/TetraSlug</texPath>
+          <drawSize>4.1</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>4.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+   <!-- ============================= =============================== -->
 </Defs>
