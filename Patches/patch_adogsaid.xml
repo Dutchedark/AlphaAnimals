@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+        <li Class="ModCheck.isModLoaded">
+				<modName>A Dog Said...</modName>
+				<yourMod>AlphaAnimals</yourMod>
+				<customMessageSuccess>A Dog Said... has been detected, enjoy applying bionics to your Alpha Animals!</customMessageSuccess>
+			</li>
+            <li Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<!-- sequence will only work on Recipes_InjuryHeal.xml -->
+					<li Class="ModCheck.FindFile">
+						<file>Recipes_InjuryHeal.xml</file>
+					</li>
+					<!-- Curing wounds recipe == should be all animals-->
+					<li Class="PatchOperationAdd">
+						<xpath>Defs/RecipeDef[@Name = "OldWoundsAnimal"]/recipeUsers</xpath>
+						<value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+						</value>
+					</li>
+				</operations>
+			</li>
+
+            <!-- first operation after sequence. Should only continue if Recipes_Surgery.xml -->
+			<li Class="ModCheck.FindFile">
+				<file>Recipes_Surgery.xml</file>
+			</li>
+            
+			   <li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallSimpleProstheticTailAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+                        <li>Bouldermit</li>
+                        <li>Cactipine</li>
+                        <li>Frostmite</li>
+                        <li>Gallatross</li>
+                        <li>Groundrunner</li>
+                        <li>MegaLouse</li>
+                        <li>TetraSlug</li>
+				  </value>
+				</li>
+                <li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallScytherBladeAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>RaptorShrimp</li>
+				  </value>
+				</li>
+                <li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallPegLegAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+                <li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallSimpleProstheticLegAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicLegAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+                <li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallNoseAnimalSimple"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicEyeAnimal"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallEarAnimalSimple"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallEarAnimalBionic"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallJawAnimalSimple"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallJawAnimalBionic"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallSpineAnimalSimple"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallSpineAnimalBionic"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallAnimalBrainStimulator"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicAnimalHeart"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicAnimalLung"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicAnimalLiver"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicAnimalKidney"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+				</li>
+				<li Class="PatchOperationAdd">
+				  <xpath>Defs/RecipeDef[defName = "InstallBionicAnimalStomach"]/recipeUsers</xpath>
+				  <value>
+						<li>ArcticLion</li>
+						<li>Barbslinger</li>
+						<li>Bouldermit</li>
+						<li>Cactipine</li>
+						<li>DevilSheep</li>
+						<li>Feralisk</li>
+						<li>Frostmite</li>
+						<li>Gallatross</li>
+						<li>Groundrunner</li>
+						<li>MegaLouse</li>
+						<li>Needlepost</li>
+						<li>RaptorShrimp</li>
+						<li>TerramorphWorm</li>
+						<li>TetraSlug</li>
+				  </value>
+			   </li>
+        </operations>
+    </Operation>
+</Patch>

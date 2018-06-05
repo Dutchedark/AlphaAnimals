@@ -17,11 +17,14 @@
         <MarketValue>3500</MarketValue>
         <MeatAmount>65</MeatAmount>
         <LeatherAmount>25</LeatherAmount>
+        <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+        <ArmorRating_Heat>0.3</ArmorRating_Heat>        
     </statBases>
     <tools>
         <li>
             <label>left paw</label>
-            <cooldownTime>2</cooldownTime>
+            <cooldownTime>1.5</cooldownTime>
             <power>25</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
@@ -36,7 +39,7 @@
         </li>
         <li>
             <label>right paw</label>
-            <cooldownTime>2</cooldownTime>
+            <cooldownTime>1.5</cooldownTime>
             <power>25</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
@@ -56,14 +59,21 @@
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
     </tools>
+    <comps>
+      <li Class="CompProperties_Shearable">
+        <woolDef>WoolArcticLion</woolDef>
+        <shearIntervalDays>20</shearIntervalDays>
+        <woolAmount>100</woolAmount>
+      </li>
+    </comps>
     <race>
       <herdAnimal>false</herdAnimal>
       <predator>true</predator>
       <body>QuadrupedAnimalWithPawsAndTail</body>
-	  <herdMigrationAllowed>false</herdMigrationAllowed>	  
+	    <herdMigrationAllowed>false</herdMigrationAllowed>	  
       <baseHungerRate>2</baseHungerRate>
       <baseBodySize>3</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>8</baseHealthScale>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <gestationPeriodDays>30</gestationPeriodDays>
       <packAnimal>false</packAnimal>
@@ -72,22 +82,22 @@
       <trainableIntelligence>Advanced</trainableIntelligence>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
-	  <leatherColor>(127,129,154)</leatherColor>
+	    <leatherColor>(127,129,154)</leatherColor>
       <leatherInsulation>2.1</leatherInsulation>
-	  <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-	  <leatherMarketValueFactor>5</leatherMarketValueFactor>
+	    <leatherCommonalityFactor>0.1</leatherCommonalityFactor>
+	    <leatherMarketValueFactor>6</leatherMarketValueFactor>
       <leatherStatFactors>
-        <ArmorRating_Blunt>3.5</ArmorRating_Blunt>
-        <ArmorRating_Sharp>3.5</ArmorRating_Sharp>
-        <ArmorRating_Heat>3</ArmorRating_Heat>
+        <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+        <ArmorRating_Heat>0.3</ArmorRating_Heat>
       </leatherStatFactors>
       <leatherLabel>arctic lion skin</leatherLabel>
       <meatLabel>arctic lion meat</meatLabel>
-	<wildBiomes>
+	    <wildBiomes>
         <IceSheet>0.01</IceSheet>
         <Tundra>0.01</Tundra>
-    </wildBiomes>
-	<nuzzleMtbHours>275</nuzzleMtbHours>
+     </wildBiomes>
+  	<nuzzleMtbHours>275</nuzzleMtbHours>
       <litterSizeCurve>
         <points>
           <li>(0.99, 0)</li>
@@ -123,56 +133,56 @@
         <defName>ArcticLion</defName>
         <label>arctic lion</label>
         <race>ArcticLion</race>
-        <combatPower>500</combatPower>
+        <combatPower>700</combatPower>
         <canArriveManhunter>true</canArriveManhunter>
-            <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
-    <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
-    <lifeStages>
-      <li>
-        <label>arctic lion cub</label>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/ArcticLion</texPath>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.3, 0.3)</volume>
-            <offset>(0,0,-0.2)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <label>arctic lion juvenile</label>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/ArcticLion</texPath>
-          <drawSize>2.7</drawSize>
-          <shadowData>
-            <volume>(0.6, 0.45, 0.45)</volume>
-            <offset>(0,0,-0.25)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
-          <drawSize>2.7</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/ArcticLion</texPath>
-          <drawSize>3.5</drawSize>
-          <shadowData>
-            <volume>(0.8, 0.6, 0.6)</volume>
-            <offset>(0,0,-0.3)</offset>
-          </shadowData>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
-          <drawSize>3.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-    </lifeStages>
+        <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+        <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
+        <lifeStages>
+          <li>
+            <label>arctic lion cub</label>
+            <bodyGraphicData>
+              <texPath>Things/Pawn/Animal/ArcticLion</texPath>
+              <drawSize>1.5</drawSize>
+              <shadowData>
+                <volume>(0.4, 0.3, 0.3)</volume>
+                <offset>(0,0,-0.2)</offset>
+              </shadowData>
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+              <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+              <drawSize>1.5</drawSize>
+            </dessicatedBodyGraphicData>
+          </li>
+          <li>
+            <label>arctic lion juvenile</label>
+            <bodyGraphicData>
+              <texPath>Things/Pawn/Animal/ArcticLion</texPath>
+              <drawSize>2.7</drawSize>
+              <shadowData>
+                <volume>(0.6, 0.45, 0.45)</volume>
+                <offset>(0,0,-0.25)</offset>
+              </shadowData>
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+              <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+              <drawSize>2.7</drawSize>
+            </dessicatedBodyGraphicData>
+          </li>
+          <li>
+            <bodyGraphicData>
+              <texPath>Things/Pawn/Animal/ArcticLion</texPath>
+              <drawSize>3.5</drawSize>
+              <shadowData>
+                <volume>(0.8, 0.6, 0.6)</volume>
+                <offset>(0,0,-0.3)</offset>
+              </shadowData>
+            </bodyGraphicData>
+            <dessicatedBodyGraphicData>
+              <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+              <drawSize>3.5</drawSize>
+            </dessicatedBodyGraphicData>
+          </li>
+        </lifeStages>
   </PawnKindDef>
 
 
@@ -187,8 +197,8 @@
       <MoveSpeed>4.00</MoveSpeed>
       <ComfyTemperatureMin>-2</ComfyTemperatureMin>
       <MarketValue>3500</MarketValue>
-      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
     </statBases>
     <tools>
         <li>
@@ -238,9 +248,7 @@
         <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
         <manhunterOnDamageChance>0.75</manhunterOnDamageChance>
         <leatherStatFactors>
-            <ArmorRating_Blunt>4.5</ArmorRating_Blunt>
-            <ArmorRating_Sharp>3</ArmorRating_Sharp>
-            <ArmorRating_Heat>4.5</ArmorRating_Heat>
+            <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
         </leatherStatFactors>
         <meatLabel>Barbslinger meat</meatLabel>
         <litterSizeCurve>
@@ -280,7 +288,7 @@
     <defName>Barbslinger</defName>
     <race>Barbslinger</race>
     <label>barbslinger</label>
-    <combatPower>500</combatPower>
+    <combatPower>350</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
@@ -343,20 +351,20 @@
         <li>
             <label>Front Left Paw</label>
             <cooldownTime>2</cooldownTime>
-            <power>28</power>
+            <power>18</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         </li>
         <li>
             <label>Front right Paw</label>
             <cooldownTime>2</cooldownTime>
-            <power>28</power>
+            <power>18</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         </li>
         <li>
             <cooldownTime>2.5</cooldownTime>
-            <power>32</power>
+            <power>22</power>
             <capacities><li>Bite</li></capacities>
             <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         </li>
@@ -378,7 +386,7 @@
         <predator>false</predator>
         <baseBodySize>4.00</baseBodySize>
         <baseHungerRate>2.0</baseHungerRate>
-        <baseHealthScale>3.0</baseHealthScale>
+        <baseHealthScale>8.0</baseHealthScale>
         <meatColor>(160,150,140)</meatColor>
         <foodType>VegetarianRoughAnimal</foodType>
         <leatherColor>(127,129,154)</leatherColor>
@@ -391,9 +399,8 @@
         <gestationPeriodDays>120</gestationPeriodDays>
         <lifeExpectancy>20</lifeExpectancy>
         <leatherStatFactors>
-            <ArmorRating_Blunt>6</ArmorRating_Blunt>
-            <ArmorRating_Sharp>4</ArmorRating_Sharp>
-            <ArmorRating_Heat>3</ArmorRating_Heat>
+            <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
         </leatherStatFactors>
         <meatLabel>Bouldermit meat</meatLabel>
         <litterSizeCurve>
@@ -431,7 +438,7 @@
     <defName>Bouldermit</defName>
     <label>bouldermit</label>
     <race>Bouldermit</race>
-    <combatPower>350</combatPower>
+    <combatPower>320</combatPower>
     <canArriveManhunter>false</canArriveManhunter>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
@@ -496,25 +503,27 @@
       <MoveSpeed>1.5</MoveSpeed>
       <ComfyTemperatureMin>-5</ComfyTemperatureMin>
       <MarketValue>700</MarketValue>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
     </statBases>
     <tools>    
         <li>
             <label>Front Left Paw</label>
-            <cooldownTime>2</cooldownTime>
-            <power>28</power>
+            <cooldownTime>1.6</cooldownTime>
+            <power>18</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         </li>
         <li>
             <label>Front Right Paw</label>
-            <cooldownTime>2</cooldownTime>
-            <power>28</power>
+            <cooldownTime>1.6</cooldownTime>
+            <power>18</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         </li>
         <li>
-            <cooldownTime>2.5</cooldownTime>
-            <power>32</power>
+            <cooldownTime>2</cooldownTime>
+            <power>25</power>
             <capacities><li>Bite</li></capacities>
             <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         </li>
@@ -535,6 +544,10 @@
         <leatherColor>(127,129,154)</leatherColor>
         <leatherLabel>cactipine leather</leatherLabel>
         <leatherInsulation>1.3</leatherInsulation>
+        <leatherStatFactors>
+            <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+        </leatherStatFactors>
         <wildness>0.9</wildness>
         <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
         <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
@@ -580,7 +593,7 @@
     <defName>Cactipine</defName>
     <label>cactipine</label>
     <race>Cactipine</race>
-    <combatPower>70</combatPower>
+    <combatPower>80</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
@@ -652,7 +665,7 @@
     </statBases>
     <tools>
         <li>
-            <cooldownTime>2.5</cooldownTime>
+            <cooldownTime>1.4</cooldownTime>
             <power>8</power>
             <capacities><li>Blunt</li></capacities>
             <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
@@ -661,7 +674,7 @@
     <comps>
       <li Class="CompProperties_Shearable">
         <woolDef>DevilstrandCloth</woolDef>
-        <shearIntervalDays>30</shearIntervalDays>
+        <shearIntervalDays>20</shearIntervalDays>
         <woolAmount>30</woolAmount>
       </li>
     </comps>
@@ -671,7 +684,7 @@
       <body>QuadrupedAnimalWithHooves</body>
       <baseBodySize>2.00</baseBodySize>
       <baseHungerRate>3.0</baseHungerRate>
-      <baseHealthScale>1.0</baseHealthScale>
+      <baseHealthScale>2.0</baseHealthScale>
       <foodType>VegetarianRoughAnimal</foodType>
       <leatherColor>(10,10,10)</leatherColor>
       <leatherLabel>devilsheep leather</leatherLabel>
@@ -815,7 +828,7 @@
     <label>Feralisk</label>
     <description>Someone once thought that creating supersized spiders for silk production was a good idea. Their home planet is now reduced to a Marble World; a world completely purged by atomic fire.</description>
     <statBases>
-      <MoveSpeed>7.20</MoveSpeed>
+      <MoveSpeed>6.20</MoveSpeed>
       <ComfyTemperatureMin>-2</ComfyTemperatureMin>
       <MarketValue>2100</MarketValue>
       <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
@@ -825,13 +838,13 @@
       <li>
         <label>Paw</label>
         <cooldownTime>2</cooldownTime>
-        <power>12</power>
+        <power>18</power>
         <capacities><li>Scratch</li></capacities>
         <linkedBodyPartsGroup>LegAttackTool</linkedBodyPartsGroup>
       </li>
       <li>
         <cooldownTime>2.5</cooldownTime>
-        <power>15</power>
+        <power>18</power>
         <capacities><li>ToxicBite</li></capacities>
         <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
       </li>
@@ -1088,21 +1101,21 @@
           Beware, the wrath of the Gallatross.
     </description>
     <statBases>
-      <MoveSpeed>1.00</MoveSpeed>
+      <MoveSpeed>3.69</MoveSpeed>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <MarketValue>5000</MarketValue>
     </statBases>
     <tools>    
         <li>
             <label>Front Left Paw</label>
-            <cooldownTime>3</cooldownTime>
+            <cooldownTime>2.2</cooldownTime>
             <power>40</power>
             <capacities><li>Blunt</li></capacities>
             <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         </li>
         <li>
             <label>Front Right Paw</label>
-            <cooldownTime>3</cooldownTime>
+            <cooldownTime>2.2</cooldownTime>
             <power>40</power>
             <capacities><li>Blunt</li></capacities>
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
@@ -1123,9 +1136,9 @@
       <packAnimal>true</packAnimal>
       <predator>false</predator>
       <body>QuadrupedAnimalWithPawsAndTail</body>
-      <baseBodySize>6.00</baseBodySize>
+      <baseBodySize>4.00</baseBodySize>
       <baseHungerRate>5.0</baseHungerRate>
-      <baseHealthScale>6.0</baseHealthScale>
+      <baseHealthScale>18</baseHealthScale>
       <foodType>VegetarianRoughAnimal, DendrovoreAnimal</foodType>
       <leatherColor>(233,233,233)</leatherColor>
       <leatherLabel>galatross leather</leatherLabel>
@@ -1171,7 +1184,7 @@
     <defName>Gallatross</defName>
     <label>gallatross</label>
     <race>Gallatross</race>
-    <combatPower>1000</combatPower>
+    <combatPower>900</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
     <lifeStages>
@@ -1274,7 +1287,7 @@ Due to their domesticated origins, they are surprisingly docile and easy to tame
 			<leatherColor>(156,102,31)</leatherColor>
 			<leatherLabel>groundrunner skin</leatherLabel>
 			<leatherInsulation>1.2</leatherInsulation>
-			<wildness>0.6</wildness>
+			<wildness>0.5</wildness>
 			<trainableIntelligence>Advanced</trainableIntelligence> <!-- *** Consider a new type of intelligence... -->
 			<gestationPeriodDays>90</gestationPeriodDays>
 			<litterSizeCurve>
@@ -1315,7 +1328,7 @@ Due to their domesticated origins, they are surprisingly docile and easy to tame
     <defName>Groundrunner</defName>
     <race>Groundrunner</race>
     <label>groundrunner</label>
-    <combatPower>350</combatPower>
+    <combatPower>200</combatPower>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_GroupSizeRange>
@@ -1369,25 +1382,27 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
       <MoveSpeed>3.00</MoveSpeed>
       <ComfyTemperatureMin>-70</ComfyTemperatureMin>
       <MarketValue>2200</MarketValue>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
     </statBases>
    	<tools>    
         <li>
             <label>Front Left Paw</label>
             <cooldownTime>1.5</cooldownTime>
-            <power>28</power>
+            <power>22</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
         </li>
         <li>
             <label>Front Right Paw</label>
             <cooldownTime>1.5</cooldownTime>
-            <power>28</power>
+            <power>22</power>
             <capacities><li>Scratch</li></capacities>
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         </li>
         <li>
-            <cooldownTime>3</cooldownTime>
-            <power>32</power>
+            <cooldownTime>2</cooldownTime>
+            <power>28</power>
             <capacities><li>Bite</li></capacities>
             <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
         </li>
@@ -1415,6 +1430,10 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
       <leatherColor>(210,210,210)</leatherColor>
       <leatherLabel>megalouse carapace</leatherLabel>
       <leatherInsulation>1.1</leatherInsulation>
+        <leatherStatFactors>
+            <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+        </leatherStatFactors>
       <wildness>0.9</wildness>
       <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
@@ -1458,7 +1477,7 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
     <defName>MegaLouse</defName>
     <label>megalouse</label>
     <race>MegaLouse</race>
-    <combatPower>150</combatPower>
+    <combatPower>250</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
@@ -1524,19 +1543,19 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
 			<MoveSpeed>5.00</MoveSpeed>
 			<ComfyTemperatureMin>10</ComfyTemperatureMin>
 			<MarketValue>630</MarketValue>
-			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
 		</statBases>
 		<tools>    
         <li>
             <label>Barb</label>
             <cooldownTime>2</cooldownTime>
-            <power>6</power>
+            <power>12</power>
             <capacities><li>ToxicSting</li></capacities>
             <linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
         </li>
         <li>
             <cooldownTime>2.2</cooldownTime>
-            <power>8</power>
+            <power>14</power>
             <capacities><li>Bite</li></capacities>
             <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
         </li>
@@ -1557,6 +1576,8 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
 			<leatherColor>(183,216,128)</leatherColor>
 			<leatherLabel>cactus flesh</leatherLabel>
 			<leatherInsulation>0.9</leatherInsulation>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
 			<wildness>0.8</wildness>
 			<trainableIntelligence>None</trainableIntelligence>
 			<gestationPeriodDays>30</gestationPeriodDays>
@@ -1596,7 +1617,7 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
     <defName>Needlepost</defName>
     <race>Needlepost</race>
     <label>needlepost</label>
-    <combatPower>90</combatPower>
+    <combatPower>60</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
@@ -1638,7 +1659,7 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
     </lifeStages>
   </PawnKindDef>
 
-   <!-- ============================================================ -->
+   <!-- =============================Raptor Shrimp=============================== -->
 
  <ThingDef ParentName="AnimalThingBase">
 		<defName>RaptorShrimp</defName>
@@ -1647,15 +1668,16 @@ Nowadays, they can be found roaming in packs that’s a joke compared to their f
 
 The few that survived an encounter with these monsters report bullets being shrugged off, limbs of their companions being torn apart, and the statement “The grass has eyes.”</description>
 		<statBases>
-			<MoveSpeed>4.70</MoveSpeed>
+			<MoveSpeed>5.70</MoveSpeed>
 			<ComfyTemperatureMin>10</ComfyTemperatureMin>
 			<MarketValue>2100</MarketValue>
-			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 		</statBases>
 		<tools>
         <li>
             <label>Blade-like Arm</label>
-            <cooldownTime>2</cooldownTime>
+            <cooldownTime>1</cooldownTime>
             <power>10</power>
             <capacities><li>Pierce</li></capacities>
             <linkedBodyPartsGroup>BladeAttackTool</linkedBodyPartsGroup>
@@ -1694,6 +1716,8 @@ The few that survived an encounter with these monsters report bullets being shru
 			<leatherLabel>raptor plate</leatherLabel>
 			<leatherInsulation>0.8</leatherInsulation>
 			<wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
 			<trainableIntelligence>None</trainableIntelligence>
 			<gestationPeriodDays>45</gestationPeriodDays>
 			<litterSizeCurve>
@@ -1776,7 +1800,7 @@ The few that survived an encounter with these monsters report bullets being shru
     </lifeStages>
   </PawnKindDef>
 
-   <!-- ============================================================ -->
+   <!-- =========================Terramorph Worm=================================== -->
 
  <ThingDef ParentName="AnimalThingBase">
 		<defName>TerramorphWorm</defName>
@@ -1794,7 +1818,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
 		<tools>
         <li>
             <label>Body</label>
-            <cooldownTime>2</cooldownTime>
+            <cooldownTime>3</cooldownTime>
             <power>30</power>
             <capacities><li>BodyCrush</li></capacities>
             <linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
@@ -1827,6 +1851,8 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
 			<leatherLabel>terramorph worm plate</leatherLabel> <!-- *** Convert to Plate later *** -->
 			<leatherInsulation>1.0</leatherInsulation>
 			<wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
 			<trainableIntelligence>Intermediate</trainableIntelligence>
 			<gestationPeriodDays>90</gestationPeriodDays>
 			<litterSizeCurve>
@@ -1865,7 +1891,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     <defName>TerramorphWorm</defName>
     <race>TerramorphWorm</race>
     <label>terramorph worm</label>
-    <combatPower>200</combatPower>
+    <combatPower>250</combatPower>
     <canArriveManhunter>true</canArriveManhunter>
     <wildSpawn_EcoSystemWeight>0.2</wildSpawn_EcoSystemWeight>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
@@ -1918,7 +1944,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       While a gentle giant that would prefer to run away instead of fight, modified slugs come armored with plasteel shells, quad cores that can act as Tesla cannons, and a Tactical AI inserted within the brain that takes over and makes no hesitation to use all of its armament to obliterate any perceived threat within vicinity.
     </description>
     <statBases>
-      <MoveSpeed>0.6</MoveSpeed>
+      <MoveSpeed>1.5</MoveSpeed>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
       <MarketValue>4000</MarketValue>
     </statBases>
@@ -1954,7 +1980,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>5.00</baseBodySize>
       <baseHungerRate>3.0</baseHungerRate>
-      <baseHealthScale>4.0</baseHealthScale>
+      <baseHealthScale>10</baseHealthScale>
       <foodType>OmnivoreRoughAnimal</foodType>
       <fleshType>Insectoid</fleshType>
       <bloodDef>FilthBloodInsect</bloodDef>
@@ -2003,7 +2029,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     <defName>TetraSlug</defName>
     <label>tetra slug</label>
     <race>TetraSlug</race>
-    <combatPower>650</combatPower>
+    <combatPower>550</combatPower>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
     <lifeStages>
       <li>
@@ -2053,5 +2079,279 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     </lifeStages>
   </PawnKindDef>
 
-   <!-- ============================= =============================== -->
+   <!-- =============================Lockjaw=============================== -->
+
+    <ThingDef ParentName="AnimalThingBase">
+    <defName>Lockjaw</defName>
+    <label>Lockjaw</label>
+    <description>
+      A very large animal native to this planet’s tropical regions. Nicknamed Lockjaws for their incredibly strong bite force, the giants can separate limb from body with little effort.
+      But despite having a guillotine for a mouth, it does not seem to be an aggressive creature; Preferring to prey on the local wildlife rather than the local populace. 
+    </description>
+    <statBases>
+      <MoveSpeed>1.5</MoveSpeed>
+      <ComfyTemperatureMin>4</ComfyTemperatureMin>
+      <MarketValue>2000</MarketValue>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>1.6</cooldownTime>
+            <power>25</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>1.6</cooldownTime>
+            <power>25</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+          <cooldownTime>2.5</cooldownTime>
+          <power>35</power>
+          <capacities><li>Bite</li></capacities>
+          <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+    <race>
+      <wildBiomes>
+        <TropicalRainforest>0.01</TropicalRainforest>
+        <TropicalSwamp>0.01</TropicalSwamp>
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <packAnimal>true</packAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>6.00</baseBodySize>
+      <baseHungerRate>2.0</baseHungerRate>
+      <baseHealthScale>10</baseHealthScale>
+      <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+      <fleshType>Normal</fleshType>
+      <leatherColor>(119, 163, 134)</leatherColor>
+      <leatherLabel>Lockjaw leather</leatherLabel>
+      <leatherInsulation>1.5</leatherInsulation>
+      <wildness>0.9</wildness>
+      <manhunterOnDamageChance>0.8</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <trainableIntelligence>Intermediate</trainableIntelligence>
+      <gestationPeriodDays>150</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.99, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>30</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <soundWounded>Pawn_Rhinoceros_Wounded</soundWounded>
+          <soundDeath>Pawn_Rhinoceros_Death</soundDeath>
+          <soundCall>Pawn_Rhinoceros_Call</soundCall>
+          <soundAngry>Pawn_Rhinoceros_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Lockjaw</defName>
+    <label>Lockjaw</label>
+    <race>Lockjaw</race>
+    <combatPower>400</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+    <lifeStages>
+      <li>
+        <label>Lockjaw</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Lockjaw</texPath>
+          <drawSize>2.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>2.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>Lockjaw</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Lockjaw</texPath>
+          <drawSize>3.2</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>3.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Lockjaw</texPath>
+          <drawSize>4.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+          <drawSize>4.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+     <!-- =============================Nightling=============================== -->
+
+ <ThingDef ParentName="AnimalThingBase">
+		<defName>Nightling</defName>
+		<label>Nightling</label>
+		<description>
+        A large deformed beast with rows of quills on its back. 
+        But during these past few decades, disturbing reports of ravaged corpses peppered with black javelins started to increase in alarming numbers. With entire caravans slaughtered in ways worse than any pirate group could possibly accomplish. People started to fear the dark and the cackling horrors waiting within them.
+    </description>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+			<MarketValue>2200</MarketValue>
+      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		</statBases>
+		<tools>
+        <li>
+            <label>Front Left Paw</label>
+            <cooldownTime>1.4</cooldownTime>
+            <power>22</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+            <label>Front Right Paw</label>
+            <cooldownTime>1.4</cooldownTime>
+            <power>22</power>
+            <capacities><li>Scratch</li></capacities>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        </li>
+        <li>
+          <cooldownTime>2</cooldownTime>
+          <power>30</power>
+          <capacities><li>Bite</li></capacities>
+          <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        </li>
+    </tools>
+		<race>
+      <wildBiomes>
+        <TemperateForest>0.05</TemperateForest>
+        <BorealForest>0.05</BorealForest>
+        <AridShrubland>0.05</AridShrubland>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<baseBodySize>2</baseBodySize>
+			<baseHungerRate>1.5</baseHungerRate>
+			<baseHealthScale>3</baseHealthScale>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <fleshType>Normal</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+			<leatherColor>(0, 30, 79)</leatherColor>
+			<leatherLabel>Nightling Leather</leatherLabel>
+			<leatherInsulation>1</leatherInsulation>
+			<wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+			<trainableIntelligence>Intermediate</trainableIntelligence>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<litterSizeCurve>
+			<points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+			</litterSizeCurve>
+			<lifeExpectancy>15</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.30</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1.50</minAge>
+					<soundWounded>Pawn_RaptorShrimp_Wounded</soundWounded>
+					<soundDeath>Pawn_RaptorShrimp_Death</soundDeath>
+					<soundCall>Pawn_RaptorShrimp_Call</soundCall>
+					<soundAngry>Pawn_RaptorShrimp_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Nightling</defName>
+    <race>Nightling</race>
+    <label>Nightling</label>
+    <combatPower>420</combatPower>
+    <canArriveManhunter>true</canArriveManhunter>
+    <wildSpawn_EcoSystemWeight>0.3</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>3</max>
+    </wildSpawn_GroupSizeRange>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Nightling</texPath>
+          <drawSize>1.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Nightling</texPath>
+          <drawSize>2.3</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>2.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Nightling</texPath>
+          <drawSize>3.0</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+          <drawSize>3.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
 </Defs>
