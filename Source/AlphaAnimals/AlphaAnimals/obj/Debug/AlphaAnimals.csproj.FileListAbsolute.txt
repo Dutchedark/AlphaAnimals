@@ -1,0 +1,3 @@
+C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\bin\Debug\AlphaAnimals.dll
+C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\obj\Debug\AlphaAnimals.csproj.CoreCompileInputs.cache
+C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\obj\Debug\AlphaAnimals.dll
