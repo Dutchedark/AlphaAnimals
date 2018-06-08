@@ -74,6 +74,7 @@ namespace AlphaAnimals
                 Log.Warning(safeTextureIndex);
                 this.path += safeTextureIndex;
             }
+            
 
             Texture2D[] texture2DArray1 = new Texture2D[3]
             {
@@ -126,7 +127,7 @@ namespace AlphaAnimals
 
         public override string ToString()
         {
-            return "Multi(initPath=" + this.path + ", color=" + (object)this.color + ", colorTwo=" + (object)this.colorTwo + ")";
+            return "MultiRandom(initPath=" + this.path + ", color=" + (object)this.color + ", colorTwo=" + (object)this.colorTwo + ")";
         }
 
         public override int GetHashCode()
