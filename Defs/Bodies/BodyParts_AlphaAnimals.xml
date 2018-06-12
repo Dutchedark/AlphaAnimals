@@ -366,4 +366,38 @@
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
+  <BodyPartDef>
+    <defName>GelatinousBody</defName>
+    <label>body</label>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GelatinousHead</defName>
+    <label>head</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>GelatinousMouth</defName>
+    <label>mouth</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
 </Defs>
