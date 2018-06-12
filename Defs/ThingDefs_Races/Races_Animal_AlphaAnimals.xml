@@ -2513,6 +2513,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     </statBases>
     <race>
       <nuzzleMtbHours>48</nuzzleMtbHours>
+      <body>GelatinousCreature</body>
       <herdAnimal>true</herdAnimal>
 			<baseBodySize>0.5</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
@@ -2522,14 +2523,44 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       <lifeExpectancy>60</lifeExpectancy>
       <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0.05</manhunterOnDamageChance>
-    	<trainableIntelligence>simple</trainableIntelligence>
+    	<trainableIntelligence>None</trainableIntelligence>
       <wildBiomes>
         <TemperateForest>0.25</TemperateForest>
         <BorealForest>0.25</BorealForest>
       </wildBiomes>
+    <litterSizeCurve>
+       <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.08</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.40</minAge>
+          <soundWounded>Pawn_Frostmite_Wounded</soundWounded>
+          <soundDeath>Pawn_Frostmite_Death</soundDeath>
+          <soundCall>Pawn_Frostmite_Call</soundCall>
+          <soundAngry>Pawn_Frostmite_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <comps>
-      <li Class="CompProperties_Glower">
+      <li Class="AlphaAnimals.CompPropertiesAnimalGlower">
         <glowColor>(190, 0, 64, 1)</glowColor>
         <glowRadius>5</glowRadius>
       </li>
