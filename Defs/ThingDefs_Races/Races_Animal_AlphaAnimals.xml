@@ -223,10 +223,28 @@
             <linkedBodyPartsGroup>Sting</linkedBodyPartsGroup>
         </li>
     </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <accuracyTouch>0.9</accuracyTouch>
+        <accuracyShort>1</accuracyShort>
+        <accuracyMedium>0.9</accuracyMedium>
+        <accuracyLong>0.8</accuracyLong>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARA_Barbslinger</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <minRange>2</minRange>
+        <range>12</range>
+        <soundCast>BowSmall</soundCast>
+        <muzzleFlashScale>2</muzzleFlashScale>
+      </li>
+    </verbs>
     <race>
         <wildBiomes>
-            <Desert>0.03</Desert>
-            <ExtremeDesert>0.03</ExtremeDesert>     
+            <Desert>0.1</Desert>
+            <ExtremeDesert>0.2</ExtremeDesert>     
         </wildBiomes>
         <body>ScorpionLike</body>
         <herdAnimal>false</herdAnimal>
@@ -959,7 +977,7 @@
     <description>A large parasite usually found in cold places. They sweep the cold barren lands in search of corpses buried in the snow. Eating the preserved flesh and leaving a ravaged skeleton in its place; devoid of their former identity.</description>
     <statBases>
       <MoveSpeed>6.00</MoveSpeed>
-      <ComfyTemperatureMin>-80</ComfyTemperatureMin>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>35</ComfyTemperatureMax>
       <MarketValue>560</MarketValue>
     </statBases>
@@ -987,8 +1005,10 @@
     </tools>
     <race>
       <wildBiomes>
-        <IceSheet>0.05</IceSheet>
-        <Tundra>0.05</Tundra>      
+        <ColdBog>0.25</ColdBog>
+        <IceSheet>0.25</IceSheet>
+        <SeaIce>0.25</SeaIce>
+        <Tundra>0.25</Tundra>
       </wildBiomes>
       <herdAnimal>true</herdAnimal>
       <predator>false</predator>
@@ -2372,6 +2392,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     </statBases>
     <race>
       <nuzzleMtbHours>48</nuzzleMtbHours>
+      <mateMtbHours>8</mateMtbHours>
       <herdAnimal>true</herdAnimal>
 			<baseBodySize>1.5</baseBodySize>
 			<baseHealthScale>2</baseHealthScale>
@@ -2451,11 +2472,16 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     <labelPlural>Meadow Aves</labelPlural>
     <race>MeadowAve</race>
 		<combatPower>400</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>4</min>
+      <max>8</max>
+    </wildSpawn_GroupSizeRange>
 		<lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MeadowAve/MeadowAve</texPath>
-          <drawSize>1.1</drawSize>
+          <drawSize>1.4</drawSize>
           <graphicClass>AlphaAnimals.Graphic_MultiRandom</graphicClass>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
@@ -2466,7 +2492,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MeadowAve/MeadowAve</texPath>
-          <drawSize>1.4</drawSize>
+          <drawSize>1.8</drawSize>
           <shadowData>
             <volume>(0.3, 0.3, 0.3)</volume>
             <offset>(0,0,-0.3)</offset>
@@ -2481,7 +2507,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/MeadowAve/MeadowAve</texPath>
-          <drawSize>1.8</drawSize>
+          <drawSize>2.2</drawSize>
           <shadowData>
             <volume>(0.4, 0.4, 0.4)</volume>
             <offset>(0,0,-0.2)</offset>
@@ -2593,15 +2619,34 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
     <labelPlural>Aerofleets</labelPlural>
     <race>Aerofleet</race>
 		<combatPower>60</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>6</min>
+      <max>10</max>
+    </wildSpawn_GroupSizeRange>
 		<lifeStages>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Aerofleet</texPath>
-          <drawSize>1</drawSize>
+          <drawSize>0.7</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
-          <drawSize>0.8</drawSize>
+          <drawSize>0.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Aerofleet</texPath>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
@@ -2609,9 +2654,147 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
           <texPath>Things/Pawn/Animal/Aerofleet</texPath>
           <drawSize>1.4</drawSize>
           <shadowData>
-            <volume>(0.3, 0.3, 0.3)</volume>
-            <offset>(0,0,-0.3)</offset>
+            <volume>(0.4, 0.4, 0.4)</volume>
+            <offset>(0,0,-0.2)</offset>
           </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+      <!-- =============================Blizzarisk=============================== -->
+  
+  <ThingDef ParentName="BaseInsect">
+    <defName>Blizzarisk</defName>
+    <label>Blizzarisk</label>
+    <description> Giant Fuzzy Snow Spiders that will eat your face of if you're not careful </description>
+    <statBases>
+      <MoveSpeed>4</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <MarketValue>800</MarketValue>
+      <LeatherAmount>0</LeatherAmount>
+    </statBases>
+	<tools>
+	  <li>
+  		<label>jaws</label>
+  		<capacities>
+  		  <li>ToxicBite</li>
+  		</capacities>
+  		<power>16</power>
+  		<cooldownTime>1.65</cooldownTime>
+      <commonality>2</commonality>
+  		<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+	  </li>
+    <li>
+      <label>left front leg</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>10</power>
+      <cooldownTime>1.65</cooldownTime>
+      <linkedBodyPartsGroup>LegAttackTool</linkedBodyPartsGroup>
+    </li>
+    <li>
+      <label>right front leg</label>
+      <capacities>
+        <li>Blunt</li>
+      </capacities>
+      <power>10</power>
+      <cooldownTime>1.65</cooldownTime>
+      <linkedBodyPartsGroup>LegAttackTool</linkedBodyPartsGroup>
+    </li>
+	</tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>BlizzariskEggFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>14</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>2</eggCountRange>
+      </li>
+    </comps>
+    <race>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <thinkTreeConstant>AnimalConstant</thinkTreeConstant>
+      <body>Arachnid</body>
+      <foodType>CarnivoreAnimal</foodType>
+      <predator>true</predator>
+      <manhunterOnDamageChance>0.8</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+      <baseBodySize>3</baseBodySize>
+      <baseHungerRate>0.4</baseHungerRate>
+      <baseHealthScale>2.5</baseHealthScale>
+      <mateMtbHours>8</mateMtbHours>
+      <nameOnNuzzleChance>0.1</nameOnNuzzleChance>
+      <nuzzleMtbHours>72</nuzzleMtbHours>
+      <wildness>0.8</wildness>
+       <wildBiomes>
+        <ColdBog>0.25</ColdBog>
+        <IceSheet>0.25</IceSheet>
+        <SeaIce>0.25</SeaIce>
+        <Tundra>0.25</Tundra>
+      </wildBiomes>
+      <lifeExpectancy>16</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>EusocialInsectLarva</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectJuvenile</def>
+          <minAge>0.03</minAge>
+        </li>
+        <li>
+          <def>EusocialInsectAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Spider_Wounded</soundWounded>
+          <soundDeath>Pawn_Megascarab_Death</soundDeath>
+          <soundCall>Pawn_Spider_Call</soundCall>
+          <soundAngry>Pawn_Spider_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>Insectoid</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Blizzarisk</defName>
+    <label>Blizzarisk</label>
+    <race>Blizzarisk</race>
+    <combatPower>220</combatPower>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+    <wildSpawn_GroupSizeRange>
+      <min>2</min>
+      <max>6</max>
+    </wildSpawn_GroupSizeRange>
+    <canArriveManhunter>true</canArriveManhunter>
+    <lifeStages>
+      <li>
+        <label>spiderling</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Blizzarisk</texPath>
+          <drawSize>0.8</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
+          <drawSize>0.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <label>juvenile spider</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Blizzarisk</texPath>
+          <drawSize>1.4</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
@@ -2620,16 +2803,16 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Aerofleet</texPath>
-          <drawSize>1.8</drawSize>
+          <texPath>Things/Pawn/Animal/Blizzarisk</texPath>
+          <drawSize>2</drawSize>
           <shadowData>
-            <volume>(0.4, 0.4, 0.4)</volume>
-            <offset>(0,0,-0.2)</offset>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.05)</offset>
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedSmall</texPath>
-          <drawSize>1.6</drawSize>
+          <drawSize>2</drawSize>
         </dessicatedBodyGraphicData>
       </li>
     </lifeStages>

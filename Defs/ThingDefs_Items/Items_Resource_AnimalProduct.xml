@@ -4,7 +4,7 @@
     <ThingDef ParentName="EggFertBase">
         <defName>EggMeadowAveFertilized</defName>
         <label>Meadow Ave egg (fert.)</label>
-        <description>Fertilized Meadow Eve egg. If all goes well, it should hatch into a beautiful smol Meadow Ave. It can be eaten raw, but it's much better cooked.</description>
+        <description>Fertilized Meadow Ave egg. If all goes well, it should hatch into a beautiful smol Meadow Ave. It can be eaten raw, but it's much better cooked.</description>
         <graphicData>
         <color>(242, 155, 89)</color>
         <drawSize>1.2</drawSize>
@@ -19,4 +19,25 @@
         </li>
         </comps>
     </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>BlizzariskEggFertilized</defName>
+    <label>Blizzarisk egg (fert.)</label>
+    <description>Fertilized Blizzarisk egg. If all goes well, it should hatch into a beautiful smol Meadow Ave. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <color>(242, 155, 89)</color>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>10</hatcherDaystoHatch>
+        <hatcherPawn>Blizzarisk</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
 </Defs>
