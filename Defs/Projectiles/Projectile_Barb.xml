@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>ARA_Barbslinger</defName>
+    <label>Barb</label>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectiles/Barb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <speed>70</speed>
+      <damageDef>Barb</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+    </projectile>
+    <thingClass>Bullet</thingClass>
+  </ThingDef>
+</Defs>

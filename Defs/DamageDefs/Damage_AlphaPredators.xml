@@ -44,4 +44,22 @@
     <armorCategory>Blunt</armorCategory>
   </DamageDef>
 
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Barb</defName>
+    <label>Barb</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stung to death.</deathMessage>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <additionalHediffs>
+      <li>
+        <hediff>ToxicBuildup</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Bullet</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+
 </Defs>

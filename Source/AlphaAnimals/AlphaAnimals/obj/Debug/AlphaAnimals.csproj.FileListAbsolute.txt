@@ -9,3 +9,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaAnimals\Source\
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\obj\Debug\AlphaAnimals.csprojResolveAssemblyReference.cache
 C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\bin\Debug\0Harmony.dll
 C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\obj\Debug\AlphaAnimals.csproj.CopyComplete
+C:\Users\Beheer\Documents\GitHub\AlphaAnimals\Source\AlphaAnimals\AlphaAnimals\obj\Debug\AlphaAnimals.csprojResolveAssemblyReference.cache
