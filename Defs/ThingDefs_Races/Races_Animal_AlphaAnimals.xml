@@ -264,7 +264,7 @@
         <gestationPeriodDays>20</gestationPeriodDays>
         <lifeExpectancy>7</lifeExpectancy>
         <manhunterOnTameFailChance>0.28</manhunterOnTameFailChance>
-        <manhunterOnDamageChance>0.75</manhunterOnDamageChance>
+        <manhunterOnDamageChance>0.9</manhunterOnDamageChance>
         <leatherStatFactors>
             <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
         </leatherStatFactors>
@@ -1141,6 +1141,23 @@
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         </li>
     </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <accuracyTouch>1</accuracyTouch>
+        <accuracyShort>0.9</accuracyShort>
+        <accuracyMedium>0.8</accuracyMedium>
+        <accuracyLong>0.6</accuracyLong>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARA_Boulder</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <range>50</range>
+        <soundCast>ThrowGrenade</soundCast>
+        <muzzleFlashScale>2</muzzleFlashScale>
+      </li>
+    </verbs>
     <race>
       <wildBiomes>
         <BorealForest>0.001</BorealForest>
@@ -1154,7 +1171,7 @@
       </wildBiomes>
       <herdAnimal>false</herdAnimal>
       <packAnimal>true</packAnimal>
-      <predator>false</predator>
+      <predator>true</predator>
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>4.00</baseBodySize>
       <baseHungerRate>5.0</baseHungerRate>
@@ -1164,7 +1181,7 @@
       <leatherLabel>galatross leather</leatherLabel>
       <leatherInsulation>3.0</leatherInsulation>
       <wildness>0.95</wildness>
-      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
       <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <gestationPeriodDays>120</gestationPeriodDays>
@@ -1984,6 +2001,28 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
             <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
         </li>
     </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <accuracyTouch>0.9</accuracyTouch>
+        <accuracyShort>0.9</accuracyShort>
+        <accuracyMedium>0.85</accuracyMedium>
+        <accuracyLong>0.8</accuracyLong>
+        <forcedMissRadius>3</forcedMissRadius>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ARA_TeslaShell</defaultProjectile>
+        <warmupTime>5</warmupTime>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <minRange>20</minRange>
+        <range>140</range>
+        <soundCast>Mortar_LaunchA</soundCast>
+        <muzzleFlashScale>8</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
     <race>
       <wildBiomes>
         <BorealForest>0.001</BorealForest>
@@ -1996,7 +2035,7 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       </wildBiomes>
       <herdAnimal>false</herdAnimal>
       <packAnimal>false</packAnimal>
-      <predator>false</predator>
+      <predator>true</predator>
       <body>QuadrupedAnimalWithPawsAndTail</body>
       <baseBodySize>5.00</baseBodySize>
       <baseHungerRate>3.0</baseHungerRate>
@@ -2009,8 +2048,8 @@ While generally peaceful, if provoked, it becomes a terrifying force that can ri
       <leatherLabel>tetra slug leather</leatherLabel>
       <leatherInsulation>2.1</leatherInsulation>
       <wildness>0.9</wildness>
-      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
-      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
       <trainableIntelligence>Advanced</trainableIntelligence>
       <gestationPeriodDays>150</gestationPeriodDays>
       <litterSizeCurve>

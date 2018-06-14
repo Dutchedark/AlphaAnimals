@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef>
+    <defName>ARA_TeslaShell</defName>
+    <label>Tesla Shell</label>
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectiles/TeslaShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <speed>40</speed>
+      <damageDef>TeslaShell</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <explosionRadius>2</explosionRadius>
+    </projectile>
+    <thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+</Defs>

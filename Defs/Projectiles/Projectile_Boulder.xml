@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef>
+		<defName>ARA_Boulder</defName>
+		<label>Boulder</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>Things/Projectiles/Boulder</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>true</flyOverhead>
+			<speed>25</speed>
+			<explosionRadius >1.9</explosionRadius >
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>35</damageAmountBase>
+		</projectile>
+		<thingClass>Projectile_Explosive</thingClass>
+	</ThingDef>
+</Defs>

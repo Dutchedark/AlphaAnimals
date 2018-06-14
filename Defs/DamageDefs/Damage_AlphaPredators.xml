@@ -54,12 +54,35 @@
     <additionalHediffs>
       <li>
         <hediff>ToxicBuildup</hediff>
-        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+        <severityPerDamageDealt>0.006</severityPerDamageDealt>
       </li>
     </additionalHediffs>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Bullet</impactSoundType>
     <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>TeslaShell</defName>
+    <label>Tesla Shell</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been exterminated.</deathMessage>
+    <isExplosive>true</isExplosive>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <spreadOut>true</spreadOut>
+    <explosionDamage>30</explosionDamage>
+    <explosionBuildingDamageFactor>2</explosionBuildingDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionColorCenter>(0.1,0.3,0.8)</explosionColorCenter>
+    <explosionColorEdge>(0.4, 0.4, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
   </DamageDef>
 
 </Defs>
