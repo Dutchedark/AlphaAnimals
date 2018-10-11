@@ -6,7 +6,7 @@
 		<label>thorax</label>
 		<hitPoints>60</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
 	</BodyPartDef>
 
@@ -15,7 +15,7 @@
 		<label>tail</label>
 		<hitPoints>10</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
 	</BodyPartDef>
 
@@ -24,7 +24,7 @@
 		<label>mouth</label>
 		<hitPoints>10</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
     <tags>
       <li>EatingSource</li>
@@ -35,27 +35,27 @@
 		<defName>InsectSting</defName>
 		<label>stinger</label>
 		<hitPoints>3</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
+		<solid>true</solid>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>LeftPincer</defName>
 		<label>left pincer</label>
 		<hitPoints>5</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
+		<solid>true</solid>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>RightPincer</defName>
 		<label>right pincer</label>
 		<hitPoints>5</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
+		<solid>true</solid>
 	</BodyPartDef>
 
 	<BodyPartDef>
@@ -63,9 +63,8 @@
 		<label>sentient plant body</label>
 		<hitPoints>40</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>MovingLimbCore</li>
     </tags>
@@ -76,9 +75,8 @@
 		<label>sentient plant head</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.3</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.3</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>HearingSource</li>
     </tags>
@@ -89,9 +87,8 @@
 		<label>sentient plant mouth</label>
 		<hitPoints>10</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>EatingSource</li>
       <li>TalkingSource</li>
@@ -103,9 +100,8 @@
 		<label>left first eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -116,9 +112,8 @@
 		<label>left second eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -129,9 +124,8 @@
 		<label>left third eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -142,9 +136,8 @@
 		<label>left first eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -155,9 +148,8 @@
 		<label>right first eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -168,9 +160,8 @@
 		<label>right second eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -181,9 +172,8 @@
 		<label>right third eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -194,9 +184,8 @@
 		<label>right first eye</label>
 		<hitPoints>8</hitPoints>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<useDestroyedOutLabel>true</useDestroyedOutLabel>
     <tags>
       <li>SightSource</li>
     </tags>
@@ -207,7 +196,7 @@
 		<label>left first leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -219,7 +208,7 @@
 		<label>left second leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -231,7 +220,7 @@
 		<label>left third leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -243,7 +232,7 @@
 		<label>left fourth leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -255,7 +244,7 @@
 		<label>right first leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -267,7 +256,7 @@
 		<label>right second leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -279,7 +268,7 @@
 		<label>right third leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -291,7 +280,7 @@
 		<label>right fourth leg</label>
 		<hitPoints>30</hitPoints>
 		<frostbiteVulnerability>0.8</frostbiteVulnerability>
-		<oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -302,7 +291,7 @@
 		<defName>LeftCreatureLimb</defName>
 		<label>left limb</label>
 		<hitPoints>30</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
@@ -311,7 +300,7 @@
 		<defName>RightCreatureLimb</defName>
 		<label>right limb</label>
 		<hitPoints>30</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<frostbiteVulnerability>1</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
@@ -320,25 +309,25 @@
 		<defName>LeftCreatureBlade</defName>
 		<label>left blade</label>
 		<hitPoints>15</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
+		<solid>true</solid>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>RightCreatureBlade</defName>
 		<label>right blade</label>
 		<hitPoints>15</hitPoints>
-		<oldInjuryBaseChance>0</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<skinCovered>false</skinCovered>
-		<isSolid>true</isSolid>
+		<solid>true</solid>
 	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>FirstWormSegment</defName>
 		<label>first body segment</label>
 		<hitPoints>25</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
@@ -346,7 +335,7 @@
 		<defName>SecondWormSegment</defName>
 		<label>second body segment</label>
 		<hitPoints>25</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
@@ -354,7 +343,7 @@
 		<defName>ThirdWormSegment</defName>
 		<label>third body segment</label>
 		<hitPoints>25</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
@@ -362,7 +351,7 @@
 		<defName>FourthWormSegment</defName>
 		<label>fourth body segment</label>
 		<hitPoints>25</hitPoints>
-		<oldInjuryBaseChance>0.7</oldInjuryBaseChance>
+		<permanentInjuryChanceFactor>0.7</permanentInjuryChanceFactor>
 		<skinCovered>true</skinCovered>
 	</BodyPartDef>
 
@@ -370,7 +359,7 @@
     <defName>GelatinousBody</defName>
     <label>body</label>
     <hitPoints>40</hitPoints>
-    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <permanentInjuryChanceFactor>0.00</permanentInjuryChanceFactor>
     <skinCovered>true</skinCovered>
     <tags>
       <li>MovingLimbCore</li>
@@ -381,7 +370,7 @@
     <defName>GelatinousHead</defName>
     <label>head</label>
     <hitPoints>30</hitPoints>
-    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <permanentInjuryChanceFactor>0.00</permanentInjuryChanceFactor>
     <skinCovered>true</skinCovered>
     <tags>
       <li>HearingSource</li>
@@ -392,7 +381,7 @@
     <defName>GelatinousMouth</defName>
     <label>mouth</label>
     <hitPoints>20</hitPoints>
-    <oldInjuryBaseChance>0.00</oldInjuryBaseChance>
+    <permanentInjuryChanceFactor>0.00</permanentInjuryChanceFactor>
     <skinCovered>true</skinCovered>
     <tags>
       <li>EatingSource</li>

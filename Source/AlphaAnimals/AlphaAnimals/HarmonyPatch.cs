@@ -26,7 +26,7 @@ namespace AlphaAnimals
                 Graphic baseGraphic = pawn.gender != Gender.Female || curKindLifeStage.femaleGraphicData == null ? curKindLifeStage.bodyGraphicData.Graphic : curKindLifeStage.femaleGraphicData.Graphic;
                 Color color = baseGraphic.color;
                 Color ColorTwo = baseGraphic.colorTwo;
-                ShaderType shader = ShaderType.Cutout;
+                Shader shader = ShaderDatabase.Cutout;
 
                 if (__instance.pawn.ageTracker.CurKindLifeStage.bodyGraphicData.graphicClass == typeof(Graphic_MultiRandom))
                 {

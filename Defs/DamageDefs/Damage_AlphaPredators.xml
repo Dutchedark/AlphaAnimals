@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<DamageDef ParentName="LocalInjuryBase">
+	<DamageDef ParentName="InjuryBase">
 		<defName>ToxicSting</defName>
 		<label>toxic sting</label>
 		<externalViolence>true</externalViolence>
@@ -19,7 +19,7 @@
 		<armorCategory>Sharp</armorCategory>
 	</DamageDef>
 
-	<DamageDef ParentName="LocalInjuryBase">
+	<DamageDef ParentName="InjuryBase">
 		<defName>Pierce</defName>
 		<label>pierce</label>
 		<externalViolence>true</externalViolence>
@@ -31,7 +31,7 @@
 		<armorCategory>Sharp</armorCategory>
 	</DamageDef>
 
-  <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="InjuryBase">
     <defName>BodyCrush</defName>
     <label>crush</label>
     <externalViolence>true</externalViolence>
@@ -44,7 +44,7 @@
     <armorCategory>Blunt</armorCategory>
   </DamageDef>
 
-  <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="InjuryBase">
     <defName>Barb</defName>
     <label>Barb</label>
     <externalViolence>true</externalViolence>
@@ -62,7 +62,7 @@
     <armorCategory>Sharp</armorCategory>
   </DamageDef>
 
-  <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="InjuryBase">
     <defName>TeslaShell</defName>
     <label>Tesla Shell</label>
     <externalViolence>true</externalViolence>
@@ -73,9 +73,8 @@
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
     <armorCategory>Blunt</armorCategory>
-    <spreadOut>true</spreadOut>
-    <explosionDamage>30</explosionDamage>
-    <explosionBuildingDamageFactor>2</explosionBuildingDamageFactor>
+    <defaultDamage>30</defaultDamage>
+    <buildingDamageFactor>2</buildingDamageFactor>
     <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
     <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
     <explosionCellMote>Mote_BlastDry</explosionCellMote>
